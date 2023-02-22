@@ -17,7 +17,7 @@ function App() {
     setLoading(true);
   
     const message = forms[index].message;
-    axios.post("http://localhost:3002/", { message }).then((res) => {
+    axios.post("https://combative-tan-bee.cyclic.app/", { message }).then((res) => {
       console.log(res);
       const newForms = [...forms];
       newForms[index].response = res.data.choices[0].text;
